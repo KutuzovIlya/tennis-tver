@@ -86,7 +86,7 @@ p { margin: 0; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand__text strong { font-size: 0.98rem; font-weight: 800; }
 .brand__text small { font-size: 0.72rem; color: var(--ink-soft); }
-.nav__links { display: flex; gap: 26px; margin-left: auto; }
+.nav__links { display: flex; gap: 22px; margin-left: auto; }
 .nav__links a { font-size: 0.94rem; font-weight: 600; color: var(--ink-soft); transition: color .15s ease; }
 .nav__links a:hover { color: var(--ink); }
 .nav__cta { padding: 10px 20px; }
@@ -147,6 +147,22 @@ p { margin: 0; }
 .checklist li { display: flex; align-items: center; gap: 11px; font-weight: 600; }
 .checklist i { color: var(--accent); font-size: 1.25rem; flex-shrink: 0; }
 .about__media img { border-radius: 24px; box-shadow: var(--shadow); width: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.about__chair { font-weight: 700; color: var(--ink); margin-top: 14px; }
+
+/* ---------- History ---------- */
+.history__layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; display: grid; gap: 30px; }
+.timeline::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+.tl-item { position: relative; }
+.tl-item::before { content: ""; position: absolute; left: -28px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.tl-year { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-dark); }
+.tl-item h3 { margin: 6px 0 6px; }
+.tl-item p { color: var(--ink-soft); font-size: 0.95rem; max-width: 52ch; }
+.facts { display: grid; gap: 18px; }
+.fact-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+.fact-card i { color: var(--accent); font-size: 1.6rem; }
+.fact-card h3 { margin: 12px 0 8px; }
+.fact-card p { color: var(--ink-soft); font-size: 0.95rem; }
 
 /* ---------- Cards ---------- */
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
@@ -307,6 +323,7 @@ p { margin: 0; }
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 30px 24px; }
   .news__grid, .sections__grid { grid-template-columns: 1fr 1fr; }
   .join__inner { grid-template-columns: 1fr; }
+  .history__layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
